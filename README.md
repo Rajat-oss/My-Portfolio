@@ -1,4 +1,4 @@
-# Portfolio Website
+# Personal Portfolio Website
 
 ## Overview
 This is a personal portfolio website for Rajat Jhade, showcasing skills, services, education, and experience as a web developer. The site features a responsive design, interactive animations, and smooth navigation.
