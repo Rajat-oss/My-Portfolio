@@ -164,6 +164,33 @@ if (servicesSection) {
     });
 }
 
+// Add animation for projects section
+const projectsSection = document.querySelector('.projects');
+const projectBoxes = document.querySelectorAll('.project-box');
+
+if (projectsSection) {
+    const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+            projectBoxes.forEach((box, index) => {
+                setTimeout(() => {
+                    box.style.opacity = '1';
+                    box.style.transform = 'translateY(0)';
+                }, index * 300);
+            });
+            observer.unobserve(projectsSection);
+        }
+    }, { threshold: 0.2 });
+
+    observer.observe(projectsSection);
+
+    // Set initial state for animation
+    projectBoxes.forEach(box => {
+        box.style.opacity = '0';
+        box.style.transform = 'translateY(50px)';
+        box.style.transition = 'all 0.6s ease';
+    });
+}
+
 // Service box hover effects
 serviceBoxes.forEach(box => {
     box.addEventListener('mouseenter', () => {
