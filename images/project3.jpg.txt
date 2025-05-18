@@ -1,2 +1,0 @@
-This is a placeholder for project3.jpg image.
-Please replace with an actual image of your Music Academy Next.js application.
