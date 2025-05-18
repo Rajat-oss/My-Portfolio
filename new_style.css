@@ -510,6 +510,95 @@ span {
 }
 
 /* --------------------------------------------------------- */
+/* About Me section */
+
+.about-me {
+    background: var(--second-bg-color);
+    position: relative;
+    overflow: hidden;
+    padding: 6rem 9% 3rem;
+}
+
+.about-me::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, var(--main-color) 0%, transparent 70%);
+    opacity: 0.1;
+    top: -150px;
+    left: -150px;
+    border-radius: 50%;
+}
+
+.about-me::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, var(--main-color) 0%, transparent 70%);
+    opacity: 0.1;
+    bottom: -150px;
+    right: -150px;
+    border-radius: 50%;
+}
+
+.about-me .heading {
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    position: relative;
+}
+
+.about-me .heading::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--main-color);
+    border-radius: 2px;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.about-content p {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.about-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+    .about-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .about-buttons .btn {
+        width: 80%;
+    }
+}
+
+/* --------------------------------------------------------- */
 /* skills sections */
 
 .skills {
